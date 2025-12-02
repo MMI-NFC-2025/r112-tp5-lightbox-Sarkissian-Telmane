@@ -3,6 +3,13 @@
 */
 dialog::backdrop {
     background-color: salmon;
-    opacity: 0.8;
 }
 
+dialog[open]::backdrop {
+    animation: backdrop-fade-in 2s forwards;
+}
+
+@keyframes backdrop-fade-in {
+    from {opacity: 0;}
+    to {opacity: 0.8;}
+}
