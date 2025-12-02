@@ -6,10 +6,19 @@ dialog::backdrop {
 }
 
 dialog[open]::backdrop {
-    animation: backdrop-fade-in 2s forwards;
+    animation: backdrop-fade-in 4s forwards;
 }
 
 @keyframes backdrop-fade-in {
     from {opacity: 0;}
     to {opacity: 0.8;}
+}
+
+dialog[open] {
+    animation: scale-up 2s forwards;
+}
+
+@keyframes scale-up {
+    from {transform: scale(0);}
+    to {transform: scale(1.25);}
 }
